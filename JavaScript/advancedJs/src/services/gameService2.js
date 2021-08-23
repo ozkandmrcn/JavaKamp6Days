@@ -12,7 +12,7 @@ export default class GameService2 {
         for (let game of games) {
             switch (game.gameType) {
                 case "Strategy":
-                    if (this.validateGame(game) === false && this.ValidateName(game)==false) {
+                    if (this.validateGame(game) === false) {
 
 
                         this.strategy.push(game)
@@ -72,4 +72,43 @@ export default class GameService2 {
         }
         return hasErrors;
     }
-}
+
+    add(game)
+    {
+        if(!this.ValidateName(game))
+        {
+            games.push(game)
+            switch (game.gameType) {
+                case "Strategy":
+                    if (this.validateGame(game) === false  ) {
+
+
+                        this.strategy.push(game)
+
+                    }
+                    break;
+
+
+                case "Arcade":
+                    if (this.validateGame(game) === false) {
+                        this.arcade.push(game)
+                    }
+                    break;
+
+                default:
+                    this.errors.push(new DataError("2 defa aynı oyun eklenemez", game))
+
+                    break;
+            }
+
+        }
+
+        console.log(this.games)
+        console.log(this.strategy)
+        console.log(this.arcade)
+        
+
+    }
+
+        }
+    

@@ -79,3 +79,6 @@ sellingService.sell(user2,game2)
 
 let gameService2=new GameService2();
 gameService2.load();
+
+
+gameService2.add({id:6,gameName:"Fifa",unitPrice:50,gameType:"Arcade"})

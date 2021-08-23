@@ -11,9 +11,9 @@ export let games = [
 
     {
         id:2,
-        gameName:"Pes",
+        gameName:"Fifa",
         unitPrice:150,
-        gameType:"Arcade"
+        gameType:"Strategy"
 
 
 
@@ -31,9 +31,9 @@ export let games = [
 
     {
         id:4,
-        gameName:"Pes",
+        gameName:"lol",
         unitPrice:150,
-        gameType:"Arcade"
+        gameType:"Strategy"
 
 
 
