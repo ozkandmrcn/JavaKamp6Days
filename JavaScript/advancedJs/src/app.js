@@ -6,10 +6,15 @@ import GameService from "./services/gameService.js"
 import SellingService from "./services/sellingService.js"
 import UserService from "./services/userService.js"
 
+import GameService2 from "./services/gameService2.js"
 
 
 
-// let product1=new Product(1,"Elma",10);
+
+
+function friday() //cuma günü kodlar
+{
+    // let product1=new Product(1,"Elma",10);
 // let product2=new Product(2,"Armut",10);
 // let product3=new Product(3,"Üzüm",10);
 // let product4=new Product(4,"İncir",10);
@@ -65,7 +70,12 @@ let sellingService=new SellingService();
 
 sellingService.sell(user1,game1)
 sellingService.sell(user2,game2)
+}
 
 
 
+// let userService2=new UserService2();
+// userService2.load();
 
+let gameService2=new GameService2();
+gameService2.load();
