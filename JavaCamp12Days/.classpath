@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="abstractClasses12Days/src"/>
+	<classpathentry kind="src" path="abstractDemo12Days/src"/>
+	<classpathentry kind="src" path="Inheritance12Days/src"/>
+	<classpathentry kind="src" path="Inheritance12DaysDemo/src"/>
+	<classpathentry kind="src" path="overriding12Days/src"/>
+	<classpathentry kind="src" path="polimorfizm12DaysDemo/src"/>
+	<classpathentry kind="output" path="Inheritance12Days/bin"/>
+</classpath>
