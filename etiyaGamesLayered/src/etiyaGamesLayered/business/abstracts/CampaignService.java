@@ -1,14 +1,11 @@
 package etiyaGamesLayered.business.abstracts;
 
-import java.util.List;
+
 
 import etiyaGamesLayered.entities.concretes.Campaign;
 
-public interface CampaignService {
+public interface CampaignService extends BaseService<Campaign>{
 	
-	void add(Campaign campaign);
-	List<Campaign> getAll();
-	void delete(Campaign campaign);
-	void update(Campaign campaign);
+
 
 }
