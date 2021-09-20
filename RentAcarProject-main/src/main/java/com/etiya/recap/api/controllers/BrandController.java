@@ -1,0 +1,58 @@
+package com.etiya.recap.api.controllers;
+
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+import com.etiya.recap.business.abstracts.BrandService;
+import com.etiya.recap.core.utilities.results.DataResult;
+import com.etiya.recap.core.utilities.results.Result;
+import com.etiya.recap.entities.concretes.Brand;
+import com.etiya.recap.entities.requests.CreateBrandRequest;
+
+@RestController
+@RequestMapping("/api/brands")
+public class BrandController {
+	
+	private BrandService brandService;
+	
+	@Autowired
+	public BrandController(BrandService brandService) {
+		this.brandService = brandService;
+	}
+
+	@PostMapping("/addbrand")
+	public ResponseEntity<?> addBrand(@Valid @RequestBody CreateBrandRequest createBrandRequest){
+		return ResponseEntity.ok(this.brandService.add(createBrandRequest)) ;
+	}
+	
+	@GetMapping("/getallbrands")
+	public DataResult<List<Brand>> getAllBrands(){
+		return this.brandService.getAll();
+	}
+	
+	@GetMapping("/getbrandbyid")
+	public DataResult<Brand> getColorById(int id) {
+		return this.brandService.getById(id);
+	}
+	
+	@DeleteMapping("/removebrand")
+	public Result removeBrand(CreateBrandRequest createBrandRequest) {
+		return this.brandService.delete(createBrandRequest);
+	}
+	
+	@PostMapping("/updatebrand")
+	public ResponseEntity<?> updateBrand(@Valid @RequestBody CreateBrandRequest createBrandRequest) {
+		return ResponseEntity.ok(this.brandService.update(createBrandRequest)) ;
+	}
+}
